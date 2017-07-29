@@ -13,7 +13,7 @@ public class CD extends Produto {
 	}
 
 	public CD(String nome, double preco, int numeroFaixas, String codBarras) {
-		super(nome, preco, codBarras);
+		super(nome, preco, codBarras,"CD");
 		this.numeroFaixas = numeroFaixas;
 	}
 
