@@ -23,6 +23,8 @@ public class Loja {
 		produtos.add(new Livro("Instrumentos mortais", 49.99, "Cassandra Clare", "47474747"));
 		produtos.add(new Livro("A rainha vermelha", 49.99, "Victoria Aveyard", "2525252255"));
 
+		DVD voceQuerBrincarNaNeve = new DVD("Frozen", 35.99, 120, "12121212");
+		
 		for (Produto produto : produtos) {
 			System.out.println(produto.toString());
 		}
@@ -30,8 +32,8 @@ public class Loja {
 		System.err.println(produtos.get(1).equals(produtos.get(2)));
 		System.err.println(produtos.get(1).equals(produtos.get(3)));
 
-		buscaProduto(produtos, "Frozen");
-		buscaProduto(produtos, "Andie");
+		buscaProduto(produtos, voceQuerBrincarNaNeve);
+		//buscaProduto(produtos, "Andie");
 	}
 
 	public static void buscaProduto(Vector<Produto> vetorProdutos, Produto produtoPesquisa) {
