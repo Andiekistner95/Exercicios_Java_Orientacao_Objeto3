@@ -2,7 +2,19 @@ package exercicio2;
 
 import java.text.DecimalFormat;
 
-public abstract class Produto implements IComparable{
+/**
+ * Declaração da classe "public abstract class Produto implements Comparable<Produto>".
+ * A implementação da interface Comparable, passando Produto como Parâmetro é utilizada
+ * para comparar objetos. A implementação desta interface foi necessária para que fosse
+ * possível utilizar o método Collections.sort(lista), onde o método necessita de um parâmetro 
+ * para efetuar a comparação. Ao implementar a interface Comparable, foram definidos um método para
+ * cada classe que extende ao produto. 
+ * 
+ * @author Andiara
+ *
+ */
+
+public abstract class Produto implements Comparable<Produto>{
 
 	DecimalFormat df = new DecimalFormat("#0.00");
 

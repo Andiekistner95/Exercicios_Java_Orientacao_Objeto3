@@ -13,7 +13,7 @@ public class CD extends Produto {
 	}
 
 	public CD(String nome, double preco, int numeroFaixas, String codBarras) {
-		super(nome, preco, codBarras,"CD");
+		super(nome, preco, codBarras, "CD");
 		this.numeroFaixas = numeroFaixas;
 	}
 
@@ -23,4 +23,17 @@ public class CD extends Produto {
 		dados += "\nNúmero  de faixas: " + getNumeroFaixas();
 		return dados;
 	}
+
+	 /**
+	* Método utilizado para servir de parâmetro para a Interface Comparable.
+	* A interface Comparable utilizará o retorno deste método para faze a comparação entre 
+	* os objetos durante uma ordenação.
+	* 
+	*/
+	
+	@Override
+	public int compareTo(Produto o) {
+		return this.getNome().compareTo(o.getNome());
+	}
+
 }

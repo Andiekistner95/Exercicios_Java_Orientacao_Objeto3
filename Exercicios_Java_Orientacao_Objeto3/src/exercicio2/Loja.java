@@ -1,5 +1,7 @@
 package exercicio2;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Vector;
 
 public class Loja {
@@ -24,16 +26,32 @@ public class Loja {
 		produtos.add(new Livro("A rainha vermelha", 49.99, "Victoria Aveyard", "2525252255"));
 
 		DVD voceQuerBrincarNaNeve = new DVD("Frozen", 35.99, 120, "12121212");
-		
+
 		for (Produto produto : produtos) {
 			System.out.println(produto.toString());
+		}
+
+	
+		Collections.sort(produtos);
+
+		
+		for (Produto produto : produtos) {
+			System.err.println("******************************");
+			System.err.println(produto.toString());
+			System.err.println("******************************");
 		}
 
 		System.err.println(produtos.get(1).equals(produtos.get(2)));
 		System.err.println(produtos.get(1).equals(produtos.get(3)));
 
 		buscaProduto(produtos, voceQuerBrincarNaNeve);
-		//buscaProduto(produtos, "Andie");
+		// buscaProduto(produtos, "Andie");
+
+		ComparableImpl comparador = new ComparableImpl();
+		System.out.println("-*****************-**************-");
+		comparador.buscaProdutoNomeCodBarras(produtos, "A seleção");
+		System.out.println("-*****************-**************-");
+
 	}
 
 	public static void buscaProduto(Vector<Produto> vetorProdutos, Produto produtoPesquisa) {
