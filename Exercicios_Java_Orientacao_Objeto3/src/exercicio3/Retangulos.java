@@ -1,19 +1,27 @@
 package exercicio3;
 
+import java.text.DecimalFormat;
+
 public class Retangulos extends Formas {
+	
+	DecimalFormat df = new DecimalFormat("#0.00");
 	
 	private double altura;
 	private double base;
-
-	public double getAltura() {
-		return altura;
-	}
 	
+	public Retangulos() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Retangulos(double altura, double base) {
 		this.altura = altura;
 		this.base = base;
 		calculaArea();
 		calculaPerimetro();
+	}
+	
+	public double getAltura() {
+		return altura;
 	}
 
 	public void setAltura(double altura) {
@@ -37,6 +45,18 @@ public class Retangulos extends Formas {
 	public void calculaArea() {
 		setArea(altura * base);
 
+	}
+	
+	@Override
+	public String toString() {
+		String dados;
+		dados = "\n-----------------------";
+		dados += "\nRetangulo";
+		dados += "\nRaio: "+ df.format(this.getAltura())+"cm";
+		dados += "\nRaio: "+ df.format(this.getBase())+"cm";
+		dados += "\nArea: "+ df.format(this.getArea())+"cm";
+		dados += "\nPerimetro: "+ df.format(this.getPerimetro())+"cm";
+		return dados;
 	}
 
 }
