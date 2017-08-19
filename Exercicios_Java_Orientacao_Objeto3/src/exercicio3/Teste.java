@@ -54,8 +54,9 @@ public class Teste {
 
 		for (Formas formas2 : formas) {
 			System.out.println(formas2.toString());
-			
+
 		}
-		
+		scanner.close();
 	}
+
 }
